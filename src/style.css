@@ -45,9 +45,14 @@ body {
   transform: translate(0, -43px) scale(0.75);
 }
 
-.Active {
+.login .Active {
   transform: translate(0, -43px) scale(0.75);
 }
+
+/* .Active {
+  transform: translate(0, -43px) scale(0.75);
+} */
+
 .login label {
   margin-left: 40px;
   font-size: 14px;
@@ -299,6 +304,10 @@ button:hover {
   transition: all 0.2s ease-out;
 }
 
-.signup:focus-within .mobile-or-email {
+.signup:focus-within label {
+  transform: translate(0, -43px) scale(0.75);
+}
+
+.signup .Active {
   transform: translate(0, -43px) scale(0.75);
 }

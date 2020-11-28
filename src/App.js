@@ -6,8 +6,10 @@ import SignUpPage from './Components/signUpPage';
 
 const App = () => {
   return (
-  //  <SignInPage />
+    <>
+    {/* <SignInPage /> */}
     <SignUpPage />
+    </>
   )
 }
 
