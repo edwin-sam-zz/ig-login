@@ -41,7 +41,11 @@ body {
   font-size: 12px;
 }
 
-.login:focus-within label {
+.login:focus-within usernameActive {
+  transform: translate(0, -43px) scale(0.75);
+}
+
+.login:focus-within passwordActive {
   transform: translate(0, -43px) scale(0.75);
 }
 
@@ -173,6 +177,7 @@ button:hover {
 
 .signuptext {
   font-family: Proxima Nova;
+  font-weight: lighter;
   text-align: center;
   color: #949494;
   font-size: 17px;
@@ -203,6 +208,7 @@ button:hover {
   width: 100%;
   margin: auto;
   margin-top: 20px;
+  margin-bottom: 20px;
   text-transform: uppercase;
   color: #999999;
   font-size: 0.9rem;
@@ -304,10 +310,128 @@ button:hover {
   transition: all 0.2s ease-out;
 }
 
-.signup:focus-within label {
+.signup:focus-within mobileActive {
+  transform: translate(0, -43px) scale(0.75);
+}
+
+.signup:focus-within fullnameActive {
+  transform: translate(0, -43px) scale(0.75);
+}
+
+.signup:focus-within usernameActive {
+  transform: translate(0, -43px) scale(0.75);
+}
+
+.signup:focus-within passwordActive {
   transform: translate(0, -43px) scale(0.75);
 }
 
 .signup .Active {
   transform: translate(0, -43px) scale(0.75);
+}
+
+.signup button:disabled {
+  border: 1px solid #c1dffd;
+  background-color: #c1dffd;
+  color: whiite;
+  cursor: auto;
+}
+
+#terms-and-conditions {
+  color: #999;
+  font-size: 14px;
+  text-align: center;
+  margin: auto;
+  margin-top: 15px;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+#terms-and-conditions a {
+  text-decoration: none;
+  color: #999;
+}
+
+#terms-and-conditions a:visited {
+  text-decoration: none;
+  color: #999;
+}
+#terms-and-conditions a:hover {
+  text-decoration: none;
+  color: #999;
+}
+#terms-and-conditions a:focus {
+  text-decoration: none;
+  color: #999;
+}
+#terms-and-conditions a:hover,
+a:active {
+  text-decoration: none;
+  color: #999;
+}
+
+.have-an-account {
+  height: 70px;
+  width: 350px;
+  position: absolute;
+  background-color: #ffffff;
+  margin: auto;
+  margin-top: 10%;
+  border: 1px solid #dbdbdb;
+}
+
+.have-an-account p {
+  margin: auto;
+  font-family: Proxima Nova Alt;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 25px;
+  font-size: 14px;
+}
+.have-an-account a {
+  color: #0096f6;
+  text-decoration: none;
+}
+
+.have-an-account a:visited {
+  text-decoration: none;
+  color: #0096f6;
+}
+.have-an-account a:hover {
+  text-decoration: none;
+  color: #0096f6;
+}
+.have-an-account a:focus {
+  text-decoration: none;
+  color: #0096f6;
+}
+.have-an-account a:hover,
+a:active {
+  text-decoration: none;
+  color: #0096f6;
+}
+
+.store {
+  margin-top: 20px;
+}
+
+#get-the-app {
+  margin-top: 35%;
+  text-align: center;
+  font-family: Proxima Nova Alt;
+  font-weight: bolder;
+  font-size: 15px;
+}
+
+#apple-image {
+  height: 40px;
+  width: 120px;
+  margin-right: 5px;
+  margin-left: 50px;
+}
+
+#android-image {
+  height: 40px;
+  width: 120px;
+  margin-left: 5px;
 }

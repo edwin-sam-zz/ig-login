@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import whiteLogo from '../images/white-fb-logo2.png'
+import appleLogo from '../images/download-apple.png'
+import androidLogo from '../images/download-google.png'
 import '../style.css';
 import SignInPage from './signInPage';
 
@@ -68,14 +70,37 @@ const SignUpPage = () => {
                 <p className="has-separator2">Or</p>
 
                 <input id="create-mobile-or-email" type="text" value={mobileOrEmail} onChange={(e) => handleMobileChange(e.target.value)} />
-                <label className={mobileActive ? 'Active' : ''} htmlFor="mobile">Mobile Number or Email</label>
-                <input id="create-fullname" type="text" value={fullname} onChange={(e) => handleFullnameChange(e.target.value)} />
-                <label className={fullnameActive ? 'Active' : ''} htmlFor="fullname">Full Name</label>
-                <input id="create-username" type="text" value={username} onChange={(e) => handleUsernameChange(e.target.value)}/>
-                <label className={usernameActive ? 'Active' : ''} htmlFor="username">Username</label>
-                <input id="create-password" type="text" value={password} onChange={(e) => handlePasswordChange(e.target.value)}/>
-                <label className={passwordActive ? 'Active' : ''} htmlFor="password">Password</label>
+                <label id="mobileActive" className={mobileActive ? 'Active' : ''} htmlFor="mobile">Mobile Number or Email</label>
 
+                <input id="create-fullname" type="text" value={fullname} onChange={(e) => handleFullnameChange(e.target.value)} />
+                <label id="fullnameActive" className={fullnameActive ? 'Active' : ''} htmlFor="fullname">Full Name</label>
+
+                <input id="create-username" type="text" value={username} onChange={(e) => handleUsernameChange(e.target.value)}/>
+                <label id="usernameActive" className={usernameActive ? 'Active' : ''} htmlFor="username">Username</label>
+
+                <input id="create-password" type="text" value={password} onChange={(e) => handlePasswordChange(e.target.value)}/>
+                <label id="passwordActive" className={passwordActive ? 'Active' : ''} htmlFor="password">Password</label>
+
+                <button className="fb-btn" disabled>Sign Up</button>
+
+                <p id="terms-and-conditions">
+                    By signing up, you agree to our <a href="https://help.instagram.com/581066165581870"><b>Terms</b></a>, <a href="https://help.instagram.com/519522125107875"><b>Data Policy</b></a>,
+                     and <a href="https://help.instagram.com/1896641480634370?ref=ig"><b>Cookies Policy</b></a>
+                </p>
+
+                <div className="have-an-account">
+                    <p>Have an account? <a href=" "><b>Log In</b></a></p>
+                </div>
+
+                <p id="get-the-app">
+                    Get the app.
+                </p>
+
+               <div className="store">
+                    <a className="apple-store" href="" ><img id="apple-image" src={appleLogo} type="img"></img></a> 
+                    <a className="android-store" href="" ><img id="android-image" src={androidLogo} type="img"></img></a>
+               </div>
+                
             </div>
         </>
     );
