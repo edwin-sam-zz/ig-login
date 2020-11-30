@@ -3,8 +3,8 @@ import React from 'react'
 const Footer = () => {
     return (
         <footer>
-            <div class="footer">
-                <nav class="footer-nav">
+            <div className="footer">
+                <nav className="footer-nav">
                     <ul>
                     <li><a href="#">About</a></li>
                     <li><a href="#">Blog</a></li>
@@ -25,7 +25,7 @@ const Footer = () => {
                     <li><a href="#">Visual Arts</a></li>
                     </ul>
                 </nav>
-            <div class="copyright-notice">
+            <div className="copyright-notice">
                 &copy; 2020 Instgram from Facebook
             </div>
             </div>

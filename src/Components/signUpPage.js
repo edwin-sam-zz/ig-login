@@ -6,6 +6,7 @@ import phonesLogo from '../images/phones-image.png';
 import '../style.css';
 import SignInPage from './signInPage';
 import { useHistory, Link, BrowserRouter as Router, withRouter, Route } from "react-router-dom";
+import { act } from 'react-dom/test-utils';
 
 const SignUpPage = () => {
 
@@ -61,6 +62,8 @@ const [fullname, setFullname] = useState('')
 const [username, setUsername] = useState('')
 const [password, setPassword] = useState('')
 
+const [signUpEnabled, setSignUpEnabled] = useState(false);
+
     return (
            <>
             <div className="signup">
@@ -89,7 +92,7 @@ const [password, setPassword] = useState('')
                 <input id="create-password" type="text" value={password} onChange={(e) => handlePasswordChange(e.target.value)}/>
                 <label id="passwordActive" className={passwordActive ? 'Active' : ''} htmlFor="password">Password</label>
 
-                <button className="fb-btn" disabled>Sign Up</button>
+                <button className="signup-btn" enabled>Sign Up</button>
 
                 <p id="terms-and-conditions">
                     By signing up, you agree to our <a href="https://help.instagram.com/581066165581870" target="_blank"><b>Terms</b></a>, <a href="https://help.instagram.com/519522125107875" target="_blank"><b>Data Policy</b></a>,

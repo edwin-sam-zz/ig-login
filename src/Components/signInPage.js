@@ -52,7 +52,8 @@ const fbLink = 'https://www.facebook.com/login.php?skip_api_login=1&api_key=1240
             <input id="password" type="text" value={password} onChange={(e) => handlePasswordChange(e.target.value)}/>
             <label id="passwordActive" className={isPasswordActive ? 'Active' : ''} htmlFor="password">Password</label>
 
-            <button id="btn" disabled>Log In</button>
+            <button id="btn" enabled>Log In</button>
+
             <p className="has-separator">Or</p>
             <a href={fbLink} className="facebook-login"><img  className="fbImage" src={logo}></img>Log in with Facebook</a>
             <p className="forgotPassword">Forgot Password?</p>  

@@ -98,6 +98,10 @@ button:hover {
   cursor: auto;
 }
 
+.login button:active {
+  background-color: #c1dffd;
+}
+
 .has-separator {
   text-align: center;
   width: 100%;
@@ -207,6 +211,23 @@ a:active {
 }
 
 .fb-btn {
+  position: relative;
+  width: 270px;
+  height: 30px;
+  text-align: left;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  font-size: 15px;
+  background-color: #0095f6;
+  border-radius: 8%;
+  border: 0px solid #dbdbdb;
+  margin: 0 auto;
+  margin-top: 15px;
+  display: block;
+}
+
+.signup-btn {
   position: relative;
   width: 270px;
   height: 30px;
@@ -350,11 +371,21 @@ a:active {
   transform: translate(0, -43px) scale(0.75);
 }
 
-.signup button:disabled {
+.signup-btn:disabled {
   border: 1px solid #c1dffd;
   background-color: #c1dffd;
   color: whiite;
   cursor: auto;
+}
+
+/* .signup-btn:enabled {
+  border: 1px solid #c1dffd;
+  background-color: #0095f6;
+  color: white;
+} */
+
+.signup-btn:active {
+  background: #c1dffd;
 }
 
 #terms-and-conditions {
