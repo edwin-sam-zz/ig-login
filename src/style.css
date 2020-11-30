@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  outline: none;
 }
 
 body {
@@ -66,6 +67,7 @@ body {
   pointer-events: none;
   position: absolute;
   transform: translate(0, -35px) scale(1);
+  outline: none;
 
   transform-origin: top left;
   transition: all 0.2s ease-out;
@@ -173,6 +175,24 @@ button:hover {
   font-weight: 100;
   font-size: 55px;
   text-align: center;
+}
+.signup a:visited {
+  text-decoration: none;
+  color: #0096f6;
+}
+.signup a:hover {
+  text-decoration: none;
+  color: #0096f6;
+}
+.signup a:focus {
+  text-decoration: none;
+  color: #0096f6;
+  outline: none;
+}
+.signup a:hover,
+a:active {
+  text-decoration: none;
+  color: #0096f6;
 }
 
 .signuptext {
@@ -363,6 +383,7 @@ button:hover {
 #terms-and-conditions a:focus {
   text-decoration: none;
   color: #999;
+  outline: none;
 }
 #terms-and-conditions a:hover,
 a:active {
@@ -388,25 +409,29 @@ a:active {
   padding-top: 25px;
   font-size: 14px;
 }
-.have-an-account a {
+.have-an-account button {
   color: #0096f6;
   text-decoration: none;
+  border: none;
+  background-color: transparent;
+  outline: none;
 }
 
-.have-an-account a:visited {
+.have-an-account button:visited {
   text-decoration: none;
   color: #0096f6;
 }
-.have-an-account a:hover {
+.have-an-account button:hover {
   text-decoration: none;
   color: #0096f6;
 }
-.have-an-account a:focus {
+.have-an-account button:focus {
   text-decoration: none;
   color: #0096f6;
+  outline: none;
 }
-.have-an-account a:hover,
-a:active {
+.have-an-account button:hover,
+button:active {
   text-decoration: none;
   color: #0096f6;
 }
@@ -434,4 +459,85 @@ a:active {
   height: 40px;
   width: 120px;
   margin-left: 5px;
+}
+
+#get-the-app-sn {
+  margin-top: -17%;
+  text-align: center;
+  font-family: Proxima Nova Alt;
+  font-weight: bolder;
+  font-size: 15px;
+}
+
+#apple-image-sn {
+  height: 40px;
+  width: 120px;
+  margin-right: 5px;
+  margin-left: 50px;
+}
+
+#android-image-sn {
+  height: 40px;
+  width: 120px;
+  margin-left: 5px;
+}
+
+.phones-image {
+  height: 565px;
+  width: 370px;
+}
+
+.phones {
+  margin-left: -115%;
+  margin-top: -185%;
+}
+
+.phones-signIn {
+  height: 565px;
+  width: 370px;
+  /* background-color: green; */
+  margin-left: -115%;
+  margin-top: -110%;
+}
+
+.need-an-account {
+  height: 70px;
+  width: 350px;
+  position: absolute;
+  background-color: #ffffff;
+  margin: auto;
+  margin-top: -42%;
+  border: 1px solid #dbdbdb;
+}
+
+.need-an-account p {
+  margin: auto;
+  font-family: Proxima Nova Alt;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 25px;
+  font-size: 14px;
+}
+.need-an-account a {
+  color: #0096f6;
+  text-decoration: none;
+}
+
+.need-an-account a:visited {
+  text-decoration: none;
+  color: #0096f6;
+}
+.need-an-account a:hover {
+  text-decoration: none;
+  color: #0096f6;
+}
+.need-an-account a:focus {
+  text-decoration: none;
+  color: #0096f6;
+  outline: none;
+}
+.need-an-account a:hover,
+a:active {
+  text-decoration: none;
+  color: #0096f6;
 }

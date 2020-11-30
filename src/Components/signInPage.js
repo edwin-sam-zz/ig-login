@@ -1,5 +1,9 @@
 import React, { useState } from 'react';
+import { BrowserRouter as Router, withRouter, Link } from 'react-router-dom'
 import logo from '../images/facebook-logo.png'
+import phonesLogo from '../images/phones-image.png'
+import appleLogo from '../images/download-apple.png'
+import androidLogo from '../images/download-google.png'
 import '../style.css';
 
 
@@ -41,18 +45,38 @@ const fbLink = 'https://www.facebook.com/login.php?skip_api_login=1&api_key=1240
       <div className="login">
           <h1>Instagram</h1>
 
-          <input type="username" type="text" value={username} onChange={(e) => handleUsernameChange(e.target.value)} />
-          <label className={isUsernameActive ? 'Active' : ''}htmlFor="username">Phone number, username, or email</label>
+          <div>
+            <input type="username" alt="text" value={username} onChange={(e) => handleUsernameChange(e.target.value)} />
+            <label id="usernameActive" className={isUsernameActive ? 'Active' : ''}htmlFor="username">Phone number, username, or email</label>
 
-          <input id="password" type="text" value={password} onChange={(e) => handlePasswordChange(e.target.value)}/>
-          <label className={isPasswordActive ? 'Active' : ''} htmlFor="password">Password</label>
+            <input id="password" type="text" value={password} onChange={(e) => handlePasswordChange(e.target.value)}/>
+            <label id="passwordActive" className={isPasswordActive ? 'Active' : ''} htmlFor="password">Password</label>
 
-          <button id="btn" disabled>Log In</button>
-          <p className="has-separator">Or</p>
-          <a href={fbLink} className="facebook-login"><img  className="fbImage" src={logo}></img>Log in with Facebook</a>
-          <p className="forgotPassword">Forgot Password?</p>  
+            <button id="btn" disabled>Log In</button>
+            <p className="has-separator">Or</p>
+            <a href={fbLink} className="facebook-login"><img  className="fbImage" src={logo}></img>Log in with Facebook</a>
+            <p className="forgotPassword">Forgot Password?</p>  
+          </div>
+          
+            <div className="phones-image-signIn">
+                <img className="phones-signIn" src={phonesLogo} type="image" alt="" ></img>
+            </div>
+
+            <div className="need-an-account">
+                   <p>Dont have an account?<Link to="/">  <b>Sign Up</b> </Link></p>
+            </div>
+
+            <p id="get-the-app-sn">
+                Get the app.
+            </p>
+
+             <div className="store">
+                <a className="apple-store" href="https://apps.apple.com/app/instagram/id389801252?vt=lo" target="_blank"><img id="apple-image-sn" src={appleLogo} type="img"></img></a> 
+                <a className="android-store" href="https://play.google.com/store/apps/details?id=com.instagram.android&referrer=utm_source%3Dinstagramweb%26utm_campaign%3DsignupPage%26ig_mid%3D604319C2-32AB-46DC-AC79-E92B13034E75%26utm_content%3Dlo%26utm_medium%3Dbadge"
+                    target="_blank" >
+                    <img id="android-image-sn" src={androidLogo} type="img"></img></a>
+            </div>
       </div>
-       
     </>
   );
 }

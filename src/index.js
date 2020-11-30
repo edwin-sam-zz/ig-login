@@ -5,8 +5,6 @@ import SignInPage from './Components/signInPage'
 
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+    <App />,
   document.getElementById('root')
 );
