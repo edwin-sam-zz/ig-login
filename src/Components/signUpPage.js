@@ -61,12 +61,8 @@ const [fullname, setFullname] = useState('')
 const [username, setUsername] = useState('')
 const [password, setPassword] = useState('')
 
-const [signUp, setSignUp] = useState(true);
-
-// const routeToSignIn = <Route path="/sign-in" component={SignInPage} />;
-
     return (
-        <>
+           <>
             <div className="signup">
                 <h1>Instagram</h1>
 

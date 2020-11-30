@@ -409,7 +409,7 @@ a:active {
   padding-top: 25px;
   font-size: 14px;
 }
-.have-an-account button {
+.have-an-account a {
   color: #0096f6;
   text-decoration: none;
   border: none;
@@ -417,21 +417,21 @@ a:active {
   outline: none;
 }
 
-.have-an-account button:visited {
+.have-an-account a:visited {
   text-decoration: none;
   color: #0096f6;
 }
-.have-an-account button:hover {
+.have-an-account a:hover {
   text-decoration: none;
   color: #0096f6;
 }
-.have-an-account button:focus {
+.have-an-account a:focus {
   text-decoration: none;
   color: #0096f6;
   outline: none;
 }
-.have-an-account button:hover,
-button:active {
+.have-an-account a:hover,
+a:active {
   text-decoration: none;
   color: #0096f6;
 }
@@ -540,4 +540,63 @@ button:active {
 a:active {
   text-decoration: none;
   color: #0096f6;
+}
+
+.footer {
+  float: bottom;
+  width: 600px;
+  text-align: center;
+  margin-left: 30%;
+  margin-top: 17%;
+  font-size: 13px;
+}
+
+.footer ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  text-decoration: none;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.footer ul li {
+  margin-right: 1.1rem;
+  margin-bottom: 6px;
+  color: #a3a3a3;
+  outline: none;
+  text-align: center;
+}
+
+.footer a {
+  text-decoration: none;
+  outline: none;
+  text-align: center;
+}
+
+.footer a:visited {
+  text-decoration: none;
+  color: #a3a3a3;
+  outline: none;
+}
+.footer a:hover {
+  text-decoration: none;
+  color: #a3a3a3;
+  outline: none;
+}
+.footer a:focus {
+  text-decoration: none;
+  color: #a3a3a3;
+  outline: none;
+}
+.footer a:hover,
+a:active {
+  text-decoration: none;
+  color: #a3a3a3;
+  outline: none;
+}
+
+.copyright-notice {
+  color: #a3a3a3;
+  margin-bottom: 70px;
 }

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom'
 import SignInPage from './Components/signInPage';
 import SignUpPage from './Components/signUpPage';
-
+import Footer from './Components/footer';
 
 
 const App = () => {
@@ -19,8 +19,11 @@ const App = () => {
         <Route path="/">
           <SignUpPage />
         </Route>
-        
+
       </Switch>
+
+      {/* Footer */}
+      <Footer />
 
     </Router>
   )
