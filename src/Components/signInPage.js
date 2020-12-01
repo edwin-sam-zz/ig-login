@@ -4,9 +4,6 @@ import logo from '../images/facebook-logo.png'
 import phonesLogo from '../images/phones-image.png'
 import appleLogo from '../images/download-apple.png'
 import androidLogo from '../images/download-google.png'
-import LIST_USER from '../queries/listUser'
-import Loading from 'react-loading'
-import { Query } from "react-apollo"
 import '../style.css';
 
 
@@ -48,20 +45,6 @@ const isFormValid = () => {
 
   return (
     <>
-    <Query query={LIST_USER} >
-        {({ loading, error, data }) => {
-          if (loading) return <Loading loading={loading} />;
-          if (error) console.log(error);
-          return (
-            <p>
-                {console.log(data)}
-            </p>
-            )}
-        }
-    </Query>
-
-
-
       <div className="login">
           <h1>Instagram</h1>
 

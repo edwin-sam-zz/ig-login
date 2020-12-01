@@ -2,20 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 
-import appSyncConfig from './appsync';
-import AWSAppSyncClient from "aws-appsync";
-import { Rehydrated } from 'aws-appsync-react';
-import { ApolloProvider } from 'react-apollo';
-
-// A
-const client = new AWSAppSyncClient({
-  url: appSyncConfig.AppSync.Default.ApiUrl,
-  region: appSyncConfig.AppSync.Default.Region,
-  auth: {
-    type: appSyncConfig.AppSync.Default.AuthMode,
-    apiKey: appSyncConfig.AppSync.Default.ApiKey,
-  }
-});
 
 // B
 const WithProvider = () => {  
@@ -30,4 +16,4 @@ const WithProvider = () => {
   )
 }
 
-ReactDOM.render(<WithProvider />, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById('root'));

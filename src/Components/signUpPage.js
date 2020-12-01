@@ -4,10 +4,8 @@ import appleLogo from '../images/download-apple.png'
 import androidLogo from '../images/download-google.png'
 import phonesLogo from '../images/phones-image.png';
 import { useHistory } from 'react-router-dom';
-import CREATE_USER from '../mutations/createUser.js';
 import '../style.css';
 import { Link } from "react-router-dom";
-import { Mutation } from 'react-apollo';
 
 const SignUpPage = () => {
 
@@ -106,16 +104,13 @@ const history = useHistory();
                 <input id="create-password" type="password" value={password} onChange={(e) => handlePasswordChange(e.target.value)}/>
                 <label id="passwordActive" className={passwordActive ? 'Active' : ''} htmlFor="password">Password</label>
 
-                <Mutation mutation={CREATE_USER} variables={{ mobileOrEmail: mobileOrEmail, fullname: fullname, username: username, password: password }} >
-                {postMutation => <button className="signup-btn" disabled={!isFormValid()} onClick={
+                <button className="signup-btn" disabled={!isFormValid()} onClick={
                     () => {
-                    postMutation();
                     clearFields();
                     alert('Directing you to sign in page...')
                     history.push('/sign-in')
                     console.log('Info saved to database')
-                }} >Sign Up</button>}
-                </Mutation>
+                }} >Sign Up</button>
                 
 
                 <p id="terms-and-conditions">
