@@ -378,12 +378,6 @@ a:active {
   cursor: auto;
 }
 
-/* .signup-btn:enabled {
-  border: 1px solid #c1dffd;
-  background-color: #0095f6;
-  color: white;
-} */
-
 .signup-btn:active {
   background: #c1dffd;
 }

@@ -3,6 +3,7 @@ import whiteLogo from '../images/white-fb-logo2.png'
 import appleLogo from '../images/download-apple.png'
 import androidLogo from '../images/download-google.png'
 import phonesLogo from '../images/phones-image.png';
+import { useHistory } from 'react-router-dom';
 import CREATE_USER from '../mutations/createUser.js';
 import '../style.css';
 import { Link } from "react-router-dom";
@@ -62,10 +63,20 @@ const [fullname, setFullname] = useState('')
 const [username, setUsername] = useState('')
 const [password, setPassword] = useState('')
 
-const shortID = (id) => {
-        var sID = id.substring(0, 7);
-        return sID;
+const clearFields = () => {
+    setMobileOrEmail('');
+    setFullname('');
+    setUsername('');
+    setPassword('');
+}
+
+const isFormValid = () => {
+    if (mobileOrEmail.length > 6 && password.length > 6) {
+         return mobileOrEmail && fullname && username && password;
     }
+}
+
+const history = useHistory();
 
     return (
            <>
@@ -75,9 +86,9 @@ const shortID = (id) => {
                 <p className="signuptext">
                     Sign up to see photos and videos from your friends.
                 </p>
-                    <a href={fbLink} target="_blank">
+                    <a href={fbLink} target="_blank" rel="noreferrer">
                         <button  className="fb-btn">
-                            <img  className="fbImage" src={whiteLogo} alt="" target="_blank"></img>
+                            <img prop="" className="fbImage" src={whiteLogo} alt="" target="_blank" rel="noreferrer"></img>
                             Log in with Facebook
                         </button>
                     </a>
@@ -92,21 +103,24 @@ const shortID = (id) => {
                 <input id="create-username" type="text" value={username} onChange={(e) => handleUsernameChange(e.target.value)}/>
                 <label id="usernameActive" className={usernameActive ? 'Active' : ''} htmlFor="username">Username</label>
 
-                <input id="create-password" type="text" value={password} onChange={(e) => handlePasswordChange(e.target.value)}/>
+                <input id="create-password" type="password" value={password} onChange={(e) => handlePasswordChange(e.target.value)}/>
                 <label id="passwordActive" className={passwordActive ? 'Active' : ''} htmlFor="password">Password</label>
 
                 <Mutation mutation={CREATE_USER} variables={{ mobileOrEmail: mobileOrEmail, fullname: fullname, username: username, password: password }} >
-                {postMutation => <button className="signup-btn" onClick={
+                {postMutation => <button className="signup-btn" disabled={!isFormValid()} onClick={
                     () => {
                     postMutation();
-                }} enabled>Sign Up</button>}
+                    clearFields();
+                    alert('Directing you to sign in page...')
+                    history.push('/sign-in')
+                    console.log('Info saved to database')
+                }} >Sign Up</button>}
                 </Mutation>
-                {console.log(mobileOrEmail, fullname, username, password)}
                 
 
                 <p id="terms-and-conditions">
-                    By signing up, you agree to our <a href="https://help.instagram.com/581066165581870" target="_blank"><b>Terms</b></a>, <a href="https://help.instagram.com/519522125107875" target="_blank"><b>Data Policy</b></a>,
-                    and <a href="https://help.instagram.com/1896641480634370?ref=ig" target="_blank"><b>Cookies Policy</b></a>
+                    By signing up, you agree to our <a href="https://help.instagram.com/581066165581870" target="_blank" rel="noreferrer"><b>Terms</b></a>, <a href="https://help.instagram.com/519522125107875" target="_blank" rel="noreferrer"><b>Data Policy</b></a>,
+                    and <a href="https://help.instagram.com/1896641480634370?ref=ig" target="_blank" rel="noreferrer"><b>Cookies Policy</b></a>
                 </p>
 
                 <div className="have-an-account">
@@ -119,14 +133,14 @@ const shortID = (id) => {
                 </p>
 
             <div className="store">
-                    <a className="apple-store" href="https://apps.apple.com/app/instagram/id389801252?vt=lo" target="_blank"><img id="apple-image" src={appleLogo} type="img"></img></a> 
+                    <a className="apple-store" href="https://apps.apple.com/app/instagram/id389801252?vt=lo" target="_blank" rel="noreferrer"><img prop="" id="apple-image" src={appleLogo} type="img"></img></a> 
                     <a className="android-store" href="https://play.google.com/store/apps/details?id=com.instagram.android&referrer=utm_source%3Dinstagramweb%26utm_campaign%3DsignupPage%26ig_mid%3D604319C2-32AB-46DC-AC79-E92B13034E75%26utm_content%3Dlo%26utm_medium%3Dbadge"
-                        target="_blank" >
-                        <img id="android-image" src={androidLogo} type="img"></img></a>
+                        target="_blank" rel="noreferrer">
+                        <img prop="" id="android-image" src={androidLogo} type="img"></img></a>
             </div>
 
                 <div className="phones">
-                    <img className="phones-image" src={phonesLogo} type="image" alt="" ></img>
+                    <img prop="" className="phones-image" src={phonesLogo} type="image" alt="" ></img>
                 </div>
             </div>
         </>
