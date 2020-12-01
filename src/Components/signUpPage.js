@@ -3,10 +3,10 @@ import whiteLogo from '../images/white-fb-logo2.png'
 import appleLogo from '../images/download-apple.png'
 import androidLogo from '../images/download-google.png'
 import phonesLogo from '../images/phones-image.png';
+import CREATE_USER from '../mutations/createUser.js';
 import '../style.css';
-import SignInPage from './signInPage';
-import { useHistory, Link, BrowserRouter as Router, withRouter, Route } from "react-router-dom";
-import { act } from 'react-dom/test-utils';
+import { Link } from "react-router-dom";
+import { Mutation } from 'react-apollo';
 
 const SignUpPage = () => {
 
@@ -62,7 +62,10 @@ const [fullname, setFullname] = useState('')
 const [username, setUsername] = useState('')
 const [password, setPassword] = useState('')
 
-const [signUpEnabled, setSignUpEnabled] = useState(false);
+const shortID = (id) => {
+        var sID = id.substring(0, 7);
+        return sID;
+    }
 
     return (
            <>
@@ -92,7 +95,14 @@ const [signUpEnabled, setSignUpEnabled] = useState(false);
                 <input id="create-password" type="text" value={password} onChange={(e) => handlePasswordChange(e.target.value)}/>
                 <label id="passwordActive" className={passwordActive ? 'Active' : ''} htmlFor="password">Password</label>
 
-                <button className="signup-btn" enabled>Sign Up</button>
+                <Mutation mutation={CREATE_USER} variables={{ mobileOrEmail: mobileOrEmail, fullname: fullname, username: username, password: password }} >
+                {postMutation => <button className="signup-btn" onClick={
+                    () => {
+                    postMutation();
+                }} enabled>Sign Up</button>}
+                </Mutation>
+                {console.log(mobileOrEmail, fullname, username, password)}
+                
 
                 <p id="terms-and-conditions">
                     By signing up, you agree to our <a href="https://help.instagram.com/581066165581870" target="_blank"><b>Terms</b></a>, <a href="https://help.instagram.com/519522125107875" target="_blank"><b>Data Policy</b></a>,

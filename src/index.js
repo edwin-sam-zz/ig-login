@@ -20,7 +20,6 @@ const client = new AWSAppSyncClient({
 
 // B
 const WithProvider = () => {  
-
   return (
     <ApolloProvider client={client}>
         <Rehydrated 
