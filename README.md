@@ -1,9 +1,7 @@
 
-=======
 # Getting Started with Edwin's Ruggable Challenge
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
->>>>>>> 30e8d81fb1cf17bf9a43911d1d7e7140df5086bf
 
 To open the application, navigate to: http://instagram-login.s3-website-us-west-2.amazonaws.com/sign-in
 
@@ -12,10 +10,7 @@ To open the application, navigate to: http://instagram-login.s3-website-us-west-
 In the project directory, you can run:
 
 ### 'nodemon server.js'
-<<<<<<< HEAD
 
-=======
->>>>>>> 30e8d81fb1cf17bf9a43911d1d7e7140df5086bf
 This runs our server. This will give you the ability to save to Database when creating a new user and quering our database when the user attempts to login
 
 ### `npm start`
