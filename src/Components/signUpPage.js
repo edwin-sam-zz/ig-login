@@ -6,6 +6,7 @@ import phonesLogo from '../images/phones-image.png';
 import { useHistory } from 'react-router-dom';
 import '../style.css';
 import { Link } from 'react-router-dom';
+import signInPage from './signInPage';
 
 const SignUpPage = () => {
   const handleUsernameChange = (text) => {

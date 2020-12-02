@@ -6,6 +6,8 @@ import appleLogo from '../images/download-apple.png';
 import androidLogo from '../images/download-google.png';
 import { withRouter } from 'react-router-dom';
 import '../style.css';
+import UserContext from '../userContext';
+// import User from '../../model/user';
 
 const SignInPage = (props) => {
   const [isUsernameActive, setUsernameActive] = useState(false);
@@ -13,7 +15,12 @@ const SignInPage = (props) => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [success, setSuccess] = useState(false);
-  const [userInfo, setUserInfo] = useState('');
+
+  const { setuValue } = useContext(UserContext);
+  const { setpValue } = useContext(UserContext);
+  const { userInfo, setUserInfo } = useContext(UserContext);
+
+  const { randomPath } = useContext(UserContext);
 
   const handleUsernameChange = (text) => {
     setUsername(text);
@@ -63,17 +70,18 @@ const SignInPage = (props) => {
         setSuccess(true);
         setUserInfo(parsedSuccess);
       }
+
+      console.log('uhmmmmmmm' + JSON.stringify(userInfo));
     } catch (e) {
       console.log(e);
     }
 
     if (success === true) {
-      props.history.push('/userProfile');
+      props.history.push(randomPath);
     } else if (success === false) {
       console.log('Wrong Credentials');
       return;
     }
-    console.log(userInfo);
   };
 
   return (
@@ -110,7 +118,15 @@ const SignInPage = (props) => {
             Password
           </label>
 
-          <button id='btn' disabled={!isFormValid()} onClick={handleLogin}>
+          <button
+            id='btn'
+            disabled={!isFormValid()}
+            onClick={() => {
+              handleLogin();
+              setuValue(username);
+              setpValue(password);
+            }}
+          >
             Log In
           </button>
 
