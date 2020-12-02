@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+
 To open the application, navigate to: http://instagram-login.s3-website-us-west-2.amazonaws.com/sign-in
 =======
 # Getting Started with Edwin's Ruggable Challenge
