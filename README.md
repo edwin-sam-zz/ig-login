@@ -37,9 +37,4 @@ The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-<<<<<<< HEAD
-=======
 
-
-
->>>>>>> 30e8d81fb1cf17bf9a43911d1d7e7140df5086bf
