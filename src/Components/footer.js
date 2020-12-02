@@ -1,6 +1,8 @@
 import React from 'react'
 
 const Footer = () => {
+
+    //Links for every page
     return (
         <footer>
             <div className="footer">
