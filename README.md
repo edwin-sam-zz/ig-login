@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 =======
 # Getting Started with Edwin's Ruggable Challenge
 
