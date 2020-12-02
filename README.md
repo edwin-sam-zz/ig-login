@@ -11,7 +11,7 @@ In the project directory, you can run:
 
 ### 'nodemon server.js'
 
-This runs our server. This will give you the ability to save to Database when creating a new user and quering our database when the user attempts to login
+This runs a local server. This will give you the ability to save to Database when creating a new user and quering the database when the user attempts to login
 
 ### `npm start`
 
