@@ -1,7 +1,8 @@
-import React, { useState, useContext } from 'react';
+import React, { useContext } from 'react';
 import { withRouter } from 'react-router-dom';
 import UserContext from '../userContext';
 
+// User's Profile page
 const UserProfile = (props) => {
   const handleSignOut = async (e) => {
     props.history.push('/sign-in');
@@ -15,13 +16,13 @@ const UserProfile = (props) => {
     <div>
       <div>
         <h1>Hello {object.username}</h1>
-        <h3>Your mobile number or email is: {object.mobileOrEmail}</h3>
-        <h3>Your fullname is: {object.fullname}</h3>
-        <h3>Your username is: {object.username}</h3>
-        <h3>Your password is: {object.password} </h3>
+        <h4> Your mobile number or email is:</h4>
+        <h2>{object.mobileOrEmail}</h2>
+        <h4> Your fullname is: </h4> <h2>{object.fullname}</h2>
+        <h4>Your username is: </h4> <h2>{object.username}</h2>
+        <h6> Your password is: </h6> <h2>{object.password}</h2>
       </div>
 
-      <h1></h1>
       <button onClick={handleSignOut}>Sign Out</button>
     </div>
   );

@@ -7,9 +7,6 @@ import UserProfile from './Components/userProfile';
 import UserContext from './userContext';
 
 const App = () => {
-  const [uvalue, setuValue] = useState(null);
-  const [pvalue, setpValue] = useState(null);
-
   const randomNumber = () => {
     let randomNums = Math.floor(Math.random() * 9999 + 1);
     return randomNums;
@@ -24,10 +21,6 @@ const App = () => {
     <Router>
       <UserContext.Provider
         value={{
-          uvalue,
-          setuValue,
-          pvalue,
-          setpValue,
           randomPath,
           setRandomPath,
           userInfo,

@@ -7,6 +7,7 @@ import { useHistory } from 'react-router-dom';
 import '../style.css';
 import { Link } from 'react-router-dom';
 
+//Sign Up Component
 const SignUpPage = () => {
   const handleUsernameChange = (text) => {
     setUsername(text);
@@ -51,18 +52,19 @@ const SignUpPage = () => {
   const fbLink =
     'https://www.facebook.com/login.php?skip_api_login=1&api_key=124024574287414&kid_directed_site=0&app_id=124024574287414&signed_next=1&next=https%3A%2F%2Fwww.facebook.com%2Fdialog%2Foauth%3Fclient_id%3D124024574287414%26redirect_uri%3Dhttps%253A%252F%252Fwww.instagram.com%252Faccounts%252Fsignup%252F%26state%3D%257B%2522fbLoginKey%2522%253A%2522p1k7rdew1iy12mhew31ukysfv1amwc6hw4ib9314gzgdp5cjp7e%2522%252C%2522fbLoginReturnURL%2522%253A%2522%252F%2522%257D%26scope%3Demail%26response_type%3Dcode%252Cgranted_scopes%26locale%3Den_US%26ret%3Dlogin%26fbapp_pres%3D0%26logger_id%3Dd17012b5-1316-401f-ac9d-7737eb823cee%26shared_id%3DTODO_SHARED_ID%26tp%3Dunspecified&cancel_url=https%3A%2F%2Fwww.instagram.com%2Faccounts%2Fsignup%2F%3Ferror%3Daccess_denied%26error_code%3D200%26error_description%3DPermissions%2Berror%26error_reason%3Duser_denied%26state%3D%257B%2522fbLoginKey%2522%253A%2522p1k7rdew1iy12mhew31ukysfv1amwc6hw4ib9314gzgdp5cjp7e%2522%252C%2522fbLoginReturnURL%2522%253A%2522%252F%2522%257D%23_%3D_&display=page&locale=en_US&pl_dbl=0';
 
+  // States to make classname active
   const [mobileActive, setMobileActive] = useState(false);
   const [fullnameActive, setFullnameActive] = useState(false);
   const [usernameActive, setUsernameActive] = useState(false);
   const [passwordActive, setPasswordActive] = useState(false);
 
+  //Inputed data state
   const [mobileOrEmail, setMobileOrEmail] = useState('');
   const [fullname, setFullname] = useState('');
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
-  //   const [info, setInfo] = useState;
-
+  // Function to clear the fields
   const clearFields = () => {
     setMobileOrEmail('');
     setFullname('');
@@ -70,14 +72,20 @@ const SignUpPage = () => {
     setPassword('');
   };
 
+  // Checking if all fields are populated
   const isFormValid = () => {
-    if (mobileOrEmail.length > 6 && password.length > 6) {
+    if (
+      mobileOrEmail.length > 6 &&
+      password.length > 6 &&
+      username.length > 6
+    ) {
       return mobileOrEmail && fullname && username && password;
     }
   };
 
   const history = useHistory();
 
+  // handling submit button for signup
   const handleSubmit = async (e) => {
     // e.preventDefault();
     try {
@@ -123,6 +131,7 @@ const SignUpPage = () => {
         </a>
         <p className='has-separator2'>Or</p>
 
+        {/* Mobile or email Input  */}
         <input
           id='create-mobile-or-email'
           type='text'
@@ -137,6 +146,7 @@ const SignUpPage = () => {
           Mobile Number or Email
         </label>
 
+        {/* Full name Input  */}
         <input
           id='create-fullname'
           type='text'
@@ -148,9 +158,10 @@ const SignUpPage = () => {
           className={fullnameActive ? 'Active' : ''}
           htmlFor='fullname'
         >
-          Full Name
+          Fullname
         </label>
 
+        {/* Username Input  */}
         <input
           id='create-username'
           type='text'
@@ -165,6 +176,7 @@ const SignUpPage = () => {
           Username
         </label>
 
+        {/* Password Input  */}
         <input
           id='create-password'
           type='password'
@@ -179,6 +191,7 @@ const SignUpPage = () => {
           Password
         </label>
 
+        {/* Sign up button */}
         <button
           className='signup-btn'
           disabled={!isFormValid()}
