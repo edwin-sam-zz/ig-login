@@ -71,7 +71,7 @@ const SignInPage = (props) => {
         setUserInfo(parsedSuccess);
       }
 
-      console.log('uhmmmmmmm' + JSON.stringify(userInfo));
+      // console.log('uhmmmmmmm' + JSON.stringify(userInfo));
     } catch (e) {
       console.log(e);
     }

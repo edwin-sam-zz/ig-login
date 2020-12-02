@@ -1,0 +1,13 @@
+{
+  "folders": [
+	{
+		"path": "../.."
+	},
+	{
+		"path": "../../../../../../.Trash/mutations"
+	}
+],
+  "settings": {
+    "git.ignoreLimitWarning": true
+  }
+}

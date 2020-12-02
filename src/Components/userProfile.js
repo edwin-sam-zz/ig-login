@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useState, useContext } from 'react';
 import { withRouter } from 'react-router-dom';
 import UserContext from '../userContext';
 
@@ -7,19 +7,18 @@ const UserProfile = (props) => {
     props.history.push('/sign-in');
   };
 
-  const { uvalue, pvalue } = useContext(UserContext);
   const { userInfo } = useContext(UserContext);
+
+  const object = userInfo;
 
   return (
     <div>
       <div>
-        <h1>Hello {uvalue}</h1>
-        <h3>Your username is: {uvalue}</h3>
-        <h3>Your password is: {pvalue} </h3>
-        <article>
-          <h3>Here is your data:</h3>
-          <p> {JSON.stringify(userInfo)}</p>
-        </article>
+        <h1>Hello {object.username}</h1>
+        <h3>Your mobile number or email is: {object.mobileOrEmail}</h3>
+        <h3>Your fullname is: {object.fullname}</h3>
+        <h3>Your username is: {object.username}</h3>
+        <h3>Your password is: {object.password} </h3>
       </div>
 
       <h1></h1>
