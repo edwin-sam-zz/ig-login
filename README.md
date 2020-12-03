@@ -21,7 +21,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
-[![Screen-Shot-2020-12-02-at-2-52-53-PM.png](https://i.postimg.cc/jjrq7nDC/Screen-Shot-2020-12-02-at-2-52-53-PM.png)](https://postimg.cc/9DJj3Mtj)
+[![Screen-Shot-2020-12-02-at-3-59-33-PM.png](https://i.postimg.cc/d11bkJjL/Screen-Shot-2020-12-02-at-3-59-33-PM.png)](https://postimg.cc/2qscgRJD)
 
 ### `npm test`
 
