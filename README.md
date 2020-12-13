@@ -1,5 +1,5 @@
 
-# Getting Started with Edwin's Ruggable Challenge
+# Getting Started with Edwin's Instagram Login
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
